@@ -1,0 +1,143 @@
+---
+title: Customization and Settings
+description: Personalize your documentation space with branding, permissions, and advanced configurations.
+---
+
+## Overview
+
+Customize your Jayesh Chaudhari documentation space to match your brand and team needs. Apply custom colors like the brand blue `#3B82F6`, manage user permissions, tweak layouts, and handle document exports. These settings ensure your space feels native to your project.
+
+<Callout kind="info">
+  Access all customization options from the **Settings** panel in your dashboard at `https://dashboard.example.com/settings`.
+</Callout>
+
+## Brand Colors and Themes
+
+Set your primary brand color and generate matching themes. Use `#3B82F6` as the default blue for buttons, links, and accents.
+
+<Steps>
+  <Step title="Access Theme Settings" icon="settings">
+    Navigate to **Settings > Branding**.
+  </Step>
+  <Step title="Enter Brand Color" icon="palette">
+    Input your hex code, such as `#3B82F6`.
+  </Step>
+  <Step title="Preview and Apply" icon="eye">
+    Preview changes live, then click **Apply Theme**.
+  </Step>
+</Steps>
+
+For advanced theming, edit the theme JSON directly:
+
+<CodeGroup tabs="JSON,CSS">
+  ```json
+  {
+    "primaryColor": "#3B82F6",
+    "secondaryColor": "#1E40AF",
+    "fontFamily": "Inter, sans-serif"
+  }
+  ```
+  ```css
+  :root {
+    --primary: #3B82F6;
+    --secondary: #1E40AF;
+  }
+  ```
+</CodeGroup>
+
+## User Permissions
+
+Control access with role-based permissions. Assign roles like Admin, Editor, or Viewer.
+
+<Tabs>
+  <Tab title="Admin" icon="shield">
+    Full access: edit documents, manage users, customize settings.
+  </Tab>
+  <Tab title="Editor" icon="edit-3">
+    Edit documents and comments, but no user management.
+  </Tab>
+  <Tab title="Viewer" icon="eye">
+    Read-only access to all content.
+  </Tab>
+</Tabs>
+
+Configure permissions via API parameters:
+
+<ParamField path="role" param-type="string" required="true">
+  User role: `admin`, `editor`, or `viewer`.
+</ParamField>
+
+<ParamField header="X-API-Key" param-type="string" required="true">
+  Your API key from `https://dashboard.example.com/api-keys`.
+</ParamField>
+
+## Layouts and Menus
+
+Tailor navigation and page layouts for better usability.
+
+<Columns cols={2}>
+  <Card title="Custom Menus" icon="menu" href="#custom-menus">
+    Add, reorder, or hide menu items.
+  </Card>
+  <Card title="Sidebar Layout" icon="layout" href="#sidebar">
+    Choose compact, full, or collapsible sidebar.
+  </Card>
+  <Card title="Page Width" icon="maximize-2" href="#width">
+    Adjust from narrow to full-width.
+  </Card>
+  <Card title="Dark Mode" icon="moon" href="#dark-mode">
+    Enable system or forced dark theme.
+  </Card>
+</Columns>
+
+## Exporting and Importing Documents
+
+Export your entire space or import from Markdown/ZIP files.
+
+<Expandable title="Export Steps" default-open="true">
+  <Steps>
+    <Step title="Select Format" icon="download">
+      Choose Markdown, PDF, or HTML.
+    </Step>
+    <Step title="Export" icon="file-text">
+      Click **Export All** to download a ZIP.
+    </Step>
+  </Steps>
+</Expandable>
+
+<Expandable title="Import Process">
+  Upload a ZIP or folder containing `.mdx` files. Ensure frontmatter includes `title` and `description`.
+
+  Example import config:
+
+  ```json
+  {
+    "source": "path/to/docs.zip",
+    "overwrite": false,
+    "validateFrontmatter": true
+  }
+  ```
+</Expandable>
+
+## Advanced Configurations
+
+For power users, tweak settings via environment variables.
+
+<Callout kind="tip">
+  Restart your space after changing env vars for changes to take effect.
+</Callout>
+
+| Setting | Type | Default | Description |
+|---------|------|---------|-------------|
+| `DOCS_PORT` | number | 3000 | Server port |
+| `BRAND_COLOR` | string | `#3B82F6` | Primary brand color |
+| `ENABLE_SEARCH` | boolean | true | Global search toggle |
+
+Test configurations locally before deploying.
+
+```bash
+export BRAND_COLOR=#3B82F6
+npm run docs:dev
+```
+
+Your customized Jayesh Chaudhari space now reflects your brand perfectly. For troubleshooting, check the logs in the dashboard.

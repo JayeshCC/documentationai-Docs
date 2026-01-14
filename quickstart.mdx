@@ -1,0 +1,150 @@
+---
+title: Quickstart Guide
+description: Get started with Jayesh Chaudhari's documentation by setting up your account and creating your first project space.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari.
+- An email address for account verification.
+- Stable internet connection.
+
+<Callout kind="info">
+
+Jayesh Chaudhari's documentation is fully web-based. No downloads required.
+
+</Callout>
+
+## Create Your Account and Log In
+
+Follow these steps to set up your account.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://app.jayeshchaudhari.com` in your browser.
+  </Step>
+  <Step title="Sign Up" icon="user-plus">
+    Click **Sign Up** and enter your email, full name, and a strong password.
+    
+    Verify your email via the confirmation link sent to your inbox.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard and click **Log In**. Use your credentials to access your workspace.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Save your password securely. Use a password manager for best security.
+
+</Callout>
+
+## Set Up Your Initial Workspace
+
+After logging in, customize your workspace.
+
+<Steps>
+  <Step title="Select Theme" icon="palette">
+    Go to **Settings > Appearance** and choose your preferred theme. The brand color `#3B82F6` is the default blue.
+  </Step>
+  <Step title="Configure Notifications" icon="bell">
+    In **Settings > Notifications**, enable email alerts for project updates.
+  </Step>
+  <Step title="Import Existing Docs" icon="upload">
+    Use the **Import** button to upload Markdown files or connect to GitHub repositories.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Project
+
+Start building your docs with a new project space.
+
+<Tabs>
+  <Tab title="From Scratch" icon="plus">
+    <Steps>
+      <Step title="New Project" icon="file-plus">
+        Click **New Project** in the sidebar.
+      </Step>
+      <Step title="Name and Configure">
+        Enter project name like `My API Docs`, select MDX format, and set visibility to public or private.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="GitHub Template" icon="github">
+    Connect your GitHub account and import a starter template.
+    
+    ```bash
+    git clone https://github.com/jayeshchaudhari/docs-template.git my-docs
+    ```
+    
+    Push changes to sync with your workspace.
+  </Tab>
+</Tabs>
+
+## Basic Navigation and Editing
+
+Navigate and edit your docs efficiently.
+
+### Sidebar Navigation
+
+Use the left sidebar for:
+
+- **Projects**: Switch between spaces.
+- **Pages**: Tree view of your MDX files.
+- **Search**: Global search with `Ctrl+K`.
+
+### Editing MDX Content
+
+Edit pages directly in the visual editor.
+
+<CodeGroup tabs="Markdown,MDX">
+  ```markdown
+  # Welcome Page
+  
+  This is your **first** page.
+  
+  - List item 1
+  - List item 2
+  ```
+  ```jsx
+  ---
+  title: Welcome
+  ---
+  
+  ## Introduction
+  
+  <Callout kind="success">
+    Jayesh Chaudhari's docs are live!
+  </Callout>
+  ```
+</CodeGroup>
+
+Preview changes in real-time. Use the toolbar for headings, images, and components.
+
+<Columns cols={3}>
+  <Card title="Save & Publish" icon="save" href="#">
+    Click **Publish** to make changes live.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="#">
+    Access revisions via **History** tab.
+  </Card>
+  <Card title="Share Links" icon="share-2" href="#">
+    Generate public URLs for pages.
+  </Card>
+</Columns>
+
+## Next Steps
+
+Explore advanced features:
+
+- Integrate with `https://api.jayeshchaudhari.com` for API docs.
+- Set up custom domains.
+- Collaborate with teams.
+
+<Callout kind="success">
+
+Congratulations! You've created your first project. Check [Introduction](/introduction) for more overview.
+
+</Callout>

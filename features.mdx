@@ -1,0 +1,119 @@
+---
+title: Core Features
+description: Discover the essential tools for organizing, editing, and collaborating on project documentation.
+---
+
+## Overview
+
+Jayesh Chaudhari's documentation space provides powerful tools to streamline your project documentation. You organize content into folders, edit with rich formatting options, collaborate seamlessly with teams, and search efficiently across all documents. These core features help you maintain structured, up-to-date docs without complexity.
+
+<Columns cols={3}>
+  <Card title="Organization" icon="folder" href="#document-organization">
+    Structure your docs with intuitive folders and nesting.
+  </Card>
+  <Card title="Editing Tools" icon="edit-3" href="#editing-tools">
+    Format content using visual or `{markdown}` editors.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Share, review, and co-edit with permissions.
+  </Card>
+</Columns>
+
+## Document Organization and Folders
+
+Organize your documentation hierarchically to keep projects manageable. Create folders for categories like API references, user guides, or release notes. Nest subfolders for deeper structure, such as `guides/quickstart` or `api/v1/endpoints`.
+
+<Steps>
+  <Step title="Create a Folder" icon="plus">
+    Navigate to your workspace root. Click the `{New Folder}` button and enter a name like `Project Docs`.
+  </Step>
+  <Step title="Add Documents" icon="file-text">
+    Inside the folder, select `{New Document}`. Choose `{Markdown}` or `{Plain Text}` format.
+  </Step>
+  <Step title="Rearrange" icon="move">
+    Drag and drop folders or files to reorder or nest them dynamically.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use descriptive names like `v2.0-release-notes` for easy navigation.
+</Callout>
+
+## Editing and Formatting Tools
+
+Edit documents with flexible tools that support real-time previews. Switch between visual WYSIWYG editing and precise `{markdown}` mode for advanced formatting.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit">
+    Highlight text and apply bold, italics, lists, or links via toolbar buttons. Embed images by dragging files directly.
+
+    ```markdown
+    Drag an image here to upload and insert.
+    ```
+  </Tab>
+  <Tab title="Markdown Editor" icon="code">
+    Write raw `{markdown}` for full control.
+
+    <CodeGroup tabs="Basic,Advanced">
+    ````markdown
+    # Core Features
+
+    - Organize folders
+    - Edit with tools
+    - Collaborate easily
+    ````
+
+    ````markdown
+    ## Advanced Formatting
+
+    > Blockquote for tips
+
+    `Inline code` for variables
+
+    ```javascript
+    console.log("Hello, Docs!");
+    ```
+    ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Collaboration and Sharing Options
+
+Invite team members to view, comment, or edit documents. Set granular permissions per folder or document.
+
+| Option | Description | Use Case |
+|--------|-------------|----------|
+| View Only | Read access without edits | Public docs, client previews |
+| Commenter | Add notes and suggestions | Review cycles |
+| Editor | Full modify access | Team contributions |
+| Admin | Manage permissions and folders | Project leads |
+
+Share via public links or embed codes. Generate a link with expiration for temporary access.
+
+<Expandable title="Advanced Permissions" default-open="false">
+  Assign roles at folder level to inherit down the hierarchy. Use `{api.example.com/docs/YOUR_KEY/share}` for programmatic sharing.
+</Expandable>
+
+## Search Functionality and Links
+
+Search across all documents with full-text indexing. Enter keywords like "authentication" to find matches in titles, content, or code blocks. Filter by folder or date.
+
+Internal links connect sections seamlessly. Use `[Link Text](/path/to/doc#section)` for navigation.
+
+```markdown
+[Go to Features](/features#editing-tools)
+```
+
+<Callout kind="info">
+  Pro tip: Pin frequent searches or use advanced operators like `from:folder "exact phrase"`.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="rocket" href="/quickstart">
+    Set up your first project.
+  </Card>
+  <Card title="API Reference" icon="api" href="/api">
+    Integrate programmatically.
+  </Card>
+</Columns>
